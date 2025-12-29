@@ -48,3 +48,24 @@ console.log(typeof null); // "object" (this is a known quirk in JavaScript)
 
 // all the non-premitive data type are objects in JavaScript
 
+
+// Stack (premitive data types) vs Heap (non-premitive data types)
+
+// Premitive data types are stored in the stack memory
+let myName = "coco";
+
+let anotherName = myName; // copy the value
+anotherName = "Riven";
+console.log(myName); // "coco"
+console.log(anotherName); // "Riven"
+
+// Non-premitive data types are stored in the heap memory
+let user = {
+    name: "coco",
+    age: 25
+};
+let admin = user; // copy the reference
+admin.age = 30;
+console.log(user.age); // 30
+console.log(admin.age); // 30
+// both user and admin point to the same object in memory

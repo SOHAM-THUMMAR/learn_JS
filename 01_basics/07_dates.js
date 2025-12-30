@@ -32,7 +32,7 @@ console.log(Math.floor(Date.now() / 1000)); // current timestamp in seconds
 
 let newDate = new Date();
 
-newDate.toLocaleString('default', { weekday: 'long'}); // "Monday"
+newDate.toLocaleString('default', { weekday: 'long'} ); // "Monday"
 
 
 

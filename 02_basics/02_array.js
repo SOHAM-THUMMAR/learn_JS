@@ -3,7 +3,6 @@ const Arr2 = [6, 7, 8, 9, 10];
 
 Arr1.push(Arr2); // adds Arr2 as a single element
 console.log(Arr1); // [1, 2, 3, 4, 5, [6, 7, 8, 9, 10]]
-
 console.log(Arr1[5][2]); // 8
 
 Arr1 = [1, 2, 3, 4, 5]; // reset Arr1

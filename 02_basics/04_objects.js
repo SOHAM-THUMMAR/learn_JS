@@ -3,14 +3,14 @@ const tinderuser1 = new Object();//singleton object
 const tinderuser2 = {};//non-singleton object
 
 
-// console.log(tinderuser1);
-// console.log(tinderuser2);
+console.log(tinderuser1);
+console.log(tinderuser2);
 
 
 tinderuser1.id = 'tn1101001134';
 tinderuser1.name = 'Renny';
 tinderuser1.isLoggedIn = false;
-// console.log(tinderuser1);
+console.log(tinderuser1);
 
 
 // nested objects
@@ -36,10 +36,14 @@ const obj3 = {obj1,obj2};
 
 // good practice
 // Object.assign({<TARGET>},<SOURCES>,...)
+
+
 const obj4 = Object.assign ({},obj1,obj2)
 // GIVES NEW OBJECT
 // console.log(obj4)
 // bad practice
+
+
 const obj5 = Object.assign (obj1,obj2)
 // ALL THE VALUES ARE GOING IN obj1
 // console.log(obj5)
@@ -98,95 +102,98 @@ let course = {
 // but we can avoide that by extracting that data from the object like given below
 
 let {courseInsructor} = course;
-// console.log(courseInsructor);
+console.log(courseInsructor);
 // we dont need to write long long address of the data 
 let {courseInsructor: faculty} = course;
-// console.log(faculty);
+console.log(faculty);
 
-// JSON API ---------------------------------------------------------------------------
+/* 
 
-
-// (json api type 1)
-// ================================================
-// {
-//   "name" : "coco",
-//   "email": "coco@gmail.com",
-//   "work" : "study",
-// }
-// ================================================
-// (json api type 2)
-// ================================================
-// {
-//   "results": [
-//     {
-//       "gender": "female",
-//       "name": {
-//         "title": "Miss",
-//         "first": "Jennie",
-//         "last": "Nichols"
-//       },
-//       "location": {
-//         "street": {
-//           "number": 8929,
-//           "name": "Valwood Pkwy",
-//         },
-//         "city": "Billings",
-//         "state": "Michigan",
-//         "country": "United States",
-//         "postcode": "63104",
-//         "coordinates": {
-//           "latitude": "-69.8246",
-//           "longitude": "134.8719"
-//         },
-//         "timezone": {
-//           "offset": "+9:30",
-//           "description": "Adelaide, Darwin"
-//         }
-//       },
-//       "email": "jennie.nichols@example.com",
-//       "login": {
-//         "uuid": "7a0eed16-9430-4d68-901f-c0d4c1c3bf00",
-//         "username": "yellowpeacock117",
-//         "password": "addison",
-//         "salt": "sld1yGtd",
-//         "md5": "ab54ac4c0be9480ae8fa5e9e2a5196a3",
-//         "sha1": "edcf2ce613cbdea349133c52dc2f3b83168dc51b",
-//         "sha256": "48df5229235ada28389b91e60a935e4f9b73eb4bdb855ef9258a1751f10bdc5d"
-//       },
-//       "dob": {
-//         "date": "1992-03-08T15:13:16.688Z",
-//         "age": 30
-//       },
-//       "registered": {
-//         "date": "2007-07-09T05:51:59.390Z",
-//         "age": 14
-//       },
-//       "phone": "(272) 790-0888",
-//       "cell": "(489) 330-2385",
-//       "id": {
-//         "name": "SSN",
-//         "value": "405-88-3636"
-//       },
-//       "picture": {
-//         "large": "https://randomuser.me/api/portraits/men/75.jpg",
-//         "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
-//         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
-//       },
-//       "nat": "US"
-//     }
-//   ],
-//   "info": {
-//     "seed": "56d27f4a53bd5441",
-//     "results": 1,
-//     "page": 1,
-//     "version": "1.4"
-//   }
-// }
-
-// tools to understand the apis =============================
-// https://jsonformatter.org/
+JSON API ---------------------------------------------------------------------------
 
 
+(json api type 1)
+================================================
+{
+  "name" : "coco",
+  "email": "coco@gmail.com",
+  "work" : "study",
+}
+================================================
+(json api type 2)
+================================================
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Jennie",
+        "last": "Nichols"
+      },
+      "location": {
+        "street": {
+          "number": 8929,
+          "name": "Valwood Pkwy",
+        },
+        "city": "Billings",
+        "state": "Michigan",
+        "country": "United States",
+        "postcode": "63104",
+        "coordinates": {
+          "latitude": "-69.8246",
+          "longitude": "134.8719"
+        },
+        "timezone": {
+          "offset": "+9:30",
+          "description": "Adelaide, Darwin"
+        }
+      },
+      "email": "jennie.nichols@example.com",
+      "login": {
+        "uuid": "7a0eed16-9430-4d68-901f-c0d4c1c3bf00",
+        "username": "yellowpeacock117",
+        "password": "addison",
+        "salt": "sld1yGtd",
+        "md5": "ab54ac4c0be9480ae8fa5e9e2a5196a3",
+        "sha1": "edcf2ce613cbdea349133c52dc2f3b83168dc51b",
+        "sha256": "48df5229235ada28389b91e60a935e4f9b73eb4bdb855ef9258a1751f10bdc5d"
+      },
+      "dob": {
+        "date": "1992-03-08T15:13:16.688Z",
+        "age": 30
+      },
+      "registered": {
+        "date": "2007-07-09T05:51:59.390Z",
+        "age": 14
+      },
+      "phone": "(272) 790-0888",
+      "cell": "(489) 330-2385",
+      "id": {
+        "name": "SSN",
+        "value": "405-88-3636"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/75.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
+      },
+      "nat": "US"
+    }
+  ],
+  "info": {
+    "seed": "56d27f4a53bd5441",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
+
+tools to understand the apis =============================
+
+https://jsonformatter.org/
+
+*/
 
 
 

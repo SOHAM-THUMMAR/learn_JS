@@ -43,10 +43,15 @@ if (score > 100){
 
 const balance = 1000;
 
-//if(balance > 500) console.log("true");//<= we did not used scope here 
+if(balance > 500) console.log("true");//<= we did not used scope here 
 // actually we have scope there and that is known as implicit scope
 // this shourt hand notation gets executed in one line only 
 // and it requaired {;} at the end of it
+
+// we can put multiple lines here to execute together by placing (,) between the lines
+if(balance > 500) console.log("true"), console.log('balance is higher than 500');
+
+//=======================================================================
 
 if (balance < 500){
   console.log("less than 500");

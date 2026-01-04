@@ -47,9 +47,9 @@ console.log(sampleMsg.replaceAll("Hellow", "Hi")); // "Hi Hi Hi"
 console.log(sampleMsg.includes("Hellow")); // true
 
 console.log(sampleMsg.split(" ")); // ['Hellow', 'Hellow', 'Hellow'](ONLY SAPARATOR)
+
 // split into array based on the separator
 // {STRING}.SPLIT({SAPARATOR}, {LIMIT})
-console
 
 
 

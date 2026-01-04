@@ -1,17 +1,20 @@
-// premitive data types
-    // string, number, boolean, null, undefined, symbol, bigint
+/*
 
-// reference (non-premitive data types)
-    // object, array, function, date, regex
+premitive data types
+    string, number, boolean, null, undefined, symbol, bigint
+
+reference (non-premitive data types)
+    object, array, function, date, regex
 
 
-//IS JS DAYNAMIC TYPED LANGUAGE?
-    // Yes, JavaScript is a dynamically typed language. This means that 
-    // variables in JavaScript do not have a fixed data type, and the type of a variable can 
-    // change at runtime based on the value assigned to it. 
-    // For example, a variable can hold a number at one moment 
-    // and then be reassigned to hold a string later on.
+IS JS DAYNAMIC TYPED LANGUAGE?
+    Yes, JavaScript is a dynamically typed language. This means that 
+    variables in JavaScript do not have a fixed data type, and the type of a variable can 
+    change at runtime based on the value assigned to it. 
+    For example, a variable can hold a number at one moment 
+    and then be reassigned to hold a string later on.
 
+*/
 const id = Symbol("123");
 console.log(typeof id); // "symbol"
 
@@ -47,11 +50,9 @@ console.log(typeof null); // "object" (this is a known quirk in JavaScript)
 
 
 // all the non-premitive data type are objects in JavaScript
-
-
 // Stack (premitive data types) vs Heap (non-premitive data types)
-
 // Premitive data types are stored in the stack memory
+
 let myName = "coco";
 
 let anotherName = myName; // copy the value

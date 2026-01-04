@@ -6,14 +6,18 @@ console.log(typeof(score));
 let valueInNumber = Number(score);
 console.log(valueInNumber);
 console.log(typeof valueInNumber);
+/*
 
-// NaN - Not a Number
-//"33" => 33
-//"33abc" => NaN
-//true => 1
-//false => 0
-//null => 0
-//undefined => NaN
+NaN - Not a Number
+"33" => 33
+"33abc" => NaN
+true => 1
+false => 0
+null => 0
+undefined => NaN
+
+*/
+
 
 let isLoggedIn = 1;
 
@@ -27,12 +31,17 @@ booleanIsLoggedIn = Boolean(isLoggedIn);
 console.log(booleanIsLoggedIn);
 console.log(typeof booleanIsLoggedIn);
 
-// 1 => true
-// 0 => false
-// "hello" => true
-// "" => false
-// null => false
-// undefined => false
+/*
+
+1 => true
+0 => false
+"hello" => true
+"" => false
+null => false
+undefined => false
+
+*/
+
 
 
 let someNumber = 33;
@@ -41,29 +50,32 @@ let stringNumber = String(someNumber);
 console.log(stringNumber);
 console.log(typeof stringNumber);
 
-// 33 => "33"
-// true => "true"
-// false => "false"
-// null => "null"
-// undefined => "undefined"
+/*
 
+33 => "33"
+true => "true"
+false => "false"
+null => "null"
+undefined => "undefined"
+
+*/
 
 
 //============================ Operations =============================
 
 let val1 = "33";
 let negVal1 = -val1;
-// console.log(val1)
-// console.log(negVal1);
+console.log(val1)
+console.log(negVal1);
 
 
 // some time wasting in + operation
-// console.log(2+2); //add
-// console.log(2-2); //subtract
-// console.log(2*2); //multiply
-// console.log(2/2); //divide
-// console.log(2**2); //power
-// console.log(2%2); //modulo()
+console.log(2+2); //add
+console.log(2-2); //subtract
+console.log(2*2); //multiply
+console.log(2/2); //divide
+console.log(2**2); //power
+console.log(2%2); //modulo()
 
 
 //concatenation
@@ -81,12 +93,13 @@ console.log("1"+"2")// "12"
 
 // WORST WAY TO WRITE CODE
 //console.log(3+3-4-67/1*3**3);
+
 // WRITE LIKE THIS INSTEAD
 //console.log((3+(3-4)-(67/1)*3)**3);
 
-// console.log(3+true) // 4 => 3 + 1 => true is converted to 1
-// console.log(+true) // +true is converting true to intreger 1
-// console.log(+false) // +false is converting false to intreger 0
+console.log(3+true) // 4 => 3 + 1 => true is converted to 1
+console.log(+true) // +true is converting true to intreger 1
+console.log(+false) // +false is converting false to intreger 0
 
 console.log(typeof (+"")); // 0 => "" is converted to 0
 
@@ -97,9 +110,11 @@ num1 = num2 = num3 = 2+2;
 
 let gameCount = "100";
 console.log(gameCount);
+
 //postfix increment operator
 gameCount++; // first use then increment
 console.log(gameCount);
+
 //prefix increment operator
 ++gameCount; // increment first then use
 console.log(gameCount);

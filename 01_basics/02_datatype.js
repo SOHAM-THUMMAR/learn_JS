@@ -16,12 +16,13 @@ console.log(3
 
   let isApproved = false; // boolean => true/false
 
-// null => empty value / standalone value 
+  /*
+null => empty value / standalone value 
 
-// undefined => value not assigned
+undefined => value not assigned
 
-//Symbol => unique identifier
-
+Symbol => unique identifier
+*/
 
 //object
 
@@ -31,4 +32,5 @@ console.log (typeof null); // object
 some says this is the error in language and 
 some says that is the way
 */
+
 console.log (typeof undefined); // undefined

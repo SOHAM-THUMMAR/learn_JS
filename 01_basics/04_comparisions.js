@@ -1,14 +1,14 @@
 // values are true or false
 
-//console.log (2>1);
-//console.log (2<1);
-//console.log (2>=2);
-//console.log (2<=2);
-//console.log (2==2);
-//console.log (2!=2);
+console.log (2>1);
+console.log (2<1);
+console.log (2>=2);
+console.log (2<=2);
+console.log (2==2);
+console.log (2!=2);
 
-// console.log("2" > 1); //string "2" is converted to number 2
-// console.log("02" > 1);
+console.log("2" > 1); //string "2" is converted to number 2
+console.log("02" > 1);
 
 /* we will try to avoid + operation for non-numbers */
 console.log(null > 0);// false => null is converted to 0 

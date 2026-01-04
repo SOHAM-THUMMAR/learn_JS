@@ -5,10 +5,15 @@
   console.log("oi");
 })(); //<= this (;) is really importent in this function to stop the IIFE
 
-//(dunction define)()<= execution call
-// (interview queation "why we use IIFE ?")
-// the pollutions og the global scope can create problen in function 
-// to prevent that we are using IIFE
+/*
+
+(dunction define)()<= execution call
+(interview queation "why we use IIFE ?")
+the pollutions og the global scope can create problen in function 
+to prevent that we are using IIFE
+
+
+*/
 
 // {arrow function}
 ( () => {

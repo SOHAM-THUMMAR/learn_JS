@@ -24,27 +24,25 @@ if (Object.keys(userData).length === 0){
 
 /*
 
-
 // falsy values
-
 false ,
 0 ,
--0 <interview>, 
-BigInt 0n,
-"",
-null,
-undefined,
-NaN
+-0 <interview> , 
+BigInt 0n ,
+"" ,
+null ,
+undefined ,
+NaN 
 
 
 // thuthy values 
-
 // see falsy values other then that are considered as truthy values
-"0","false"," " // any thing in string is considared as truthy value
-[],{},
+"0" ,
+"false" ,
+" " // any thing in string is considared as truthy value
+[] ,
+{} ,
 functhin(){} <empty function>
-
-
 
 */
 
@@ -80,14 +78,15 @@ console.log(val1);//15
 
 val1 = null ?? 10 ?? 15;
 console.log(val1); //10
+/*
 
-// "??" asigns the 1st real value which appears to it
-// "??" this is used in data base operation for null sefty
+"??" asigns the 1st real value which appears to it
+"??" this is used in data base operation for null sefty
+"??" and turnary operator (?) is completely different from each other
 
-// "??" and turnary operator (?) is completely different from each other
+*/
 
 // turnary operator 
-
 // condition ? true : false
 
 const iceTeaPrice = 100;

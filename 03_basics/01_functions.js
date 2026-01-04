@@ -1,10 +1,10 @@
 // if someone says to write name in spacific formate 100 times 
 // then doing this 100 times
 
-// console.log("c");
-// console.log("o");
-// console.log("c");
-// console.log("o");
+console.log("c");
+console.log("o");
+console.log("c");
+console.log("o");
 
 // is not good practice 
 // we can create a function and do this same thing in just word (name of the function) 
@@ -29,34 +29,37 @@ add2Numbers("a",3); // a3
 add2Numbers(2, null); // 2
 
 let result = add2Numbers(2,3);
-// console.log(`result: ${result}`);
+console.log(`result: ${result}`);
 
-// in "result" we are getting undefined 
-// because we are not returning any thingin function
-//--------------------------------------------------------
-// we are not focuing on logic right now 
-//we are focusing on function
+// in "result" we are getting 'undefined' 
+// because we are not returning any thing in function
 
-// <namings>
+/*
 
-// function myFunction (<parameters>){
+we are not focuing on logic right now 
+we are focusing on function
 
-// }
+<namings>
 
-// myFunction(<arguments>)
-//--------------------------------------------------------
+function myFunction (<parameters>){
 
+}
+
+myFunction(<arguments>)
+
+*/
 function add2NumbersV2 (number1,number2) {
-  // let number3 = number1 + number2;
-  // return number3;
+  let number3 = number1 + number2;
+  return number3;
   return number1 + number2;
   console.log(number3);
   // once js gets return statement in function it stops execution of the code 
-  // so 'console.log(number3);' will ne=ver get executed
+  // so 'console.log(number3);' will never get executed
   //  because it is unreachable code
 }
 result = add2NumbersV2(2,3);
-// console.log(`result: ${result}`);
+console.log(`result: ${result}`);
+
 // now we are getting the value in "result" 
 // because we are returning the value
 
@@ -64,11 +67,11 @@ function loginUserMessage(username){
   return `${username} just logged in`;
 }
 
-// console.log(loginUserMessage("COCO"));
+console.log(loginUserMessage("COCO"));
 // COCO just logged in
-// console.log(loginUserMessage(""));
+console.log(loginUserMessage(""));
 //  just logged in
-// console.log(loginUserMessage());
+console.log(loginUserMessage());
 // undefined just logged in
 
 function loginUserMessageV2(username){
@@ -78,11 +81,11 @@ function loginUserMessageV2(username){
   }
   return `${username} just logged in`;
 }
-// console.log(loginUserMessageV2("COCO"));
+console.log(loginUserMessageV2("COCO"));
 // COCO just logged in
-// console.log(loginUserMessageV2(""));
+console.log(loginUserMessageV2(""));
 //  just logged in
-// console.log(loginUserMessageV2());
+console.log(loginUserMessageV2());
 // please enter a user name
 // undefined
 
@@ -96,24 +99,28 @@ function loginUserMessageV3(username ="user"){
   }
   return `${username} just logged in`;
 }
-// console.log(loginUserMessageV3("COCO"));
+console.log(loginUserMessageV3("COCO"));
 // COCO just logged in
-// console.log(loginUserMessageV3(""));
+console.log(loginUserMessageV3(""));
 //  just logged in
-// console.log(loginUserMessageV3());
+console.log(loginUserMessageV3());
 // user just logged in
 
 // really good queation----------------------------------------
-// shoing cart price does not have fix number of object 
+// shoping cart price does not have fix number of object 
 // so how to find the total
 
 function calculateCartPrice(num1){
   return num1;
 }
 
-// console.log(calculateCartPrice(2))// 2
+console.log(calculateCartPrice(2))// 2
 // works fine
-// console.log(calculateCartPrice(2,20,45,56,235,6788))
+
+
+// console.log(calculateCartPrice(2,20,45,56,235,6788))//<= will throw error
+
+
 // will not work because we have only one parameter
 // so we have to use the "rest" operator
 
@@ -122,7 +129,7 @@ function calculateCartPriceV2(...num1){
 }
 
 console.log(calculateCartPriceV2(2))
-//  2 ]
+// [2]
 console.log(calculateCartPriceV2(2,20,45,56,235,6788))
 // [ 2, 20, 45, 56, 235, 6788 ]
 

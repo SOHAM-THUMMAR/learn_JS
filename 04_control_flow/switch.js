@@ -21,10 +21,15 @@ let month2 = "sep";
 switch (month) {
   case 1:
     console.log("january");
-    break;// 'break' is very importent here 
-  // if you fore get to add "break" statement 
-  // then all the cases after true case will be executed
-  // except default
+    break;
+/*
+
+  'break' is very importent here 
+  if you fore get to add "break" statement 
+  then all the cases after true case will be executed
+  except default
+
+*/
   case 2:
     console.log("February");
     break;

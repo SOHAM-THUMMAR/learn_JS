@@ -6,15 +6,16 @@ const user = {
     console.log(this);
   }
 }
-// "this" keyword is used to get the current context
-// accessing from the existing and available scope
-// inside function {} <= scope and outside function {} => scope has different current context 
-// keep this in mind
-
-// user.welcomeMessage();
-// user.username = "riven";
-// user.welcomeMessage();
-// console.log(this);
+/*
+"this" keyword is used to get the current context
+accessing from the existing and available scope
+inside function {} <= scope and outside function {} => scope has different current context 
+keep this in mind
+*/
+user.welcomeMessage();
+user.username = "riven";
+user.welcomeMessage();
+console.log(this);
 
 // importent ==============================
 // console.log (this);
@@ -23,57 +24,60 @@ const user = {
 // browser console => Window {0: Window, 1: Window, window: Window, self: Window, document: document, name: '', location: Location, …}
 // ========================================
 
-// function one (){
-//   let username = "coco";
-//   console.log(this);
-// }
-// one();
+function one (){
+  let username = "coco";
+  console.log(this);
+}
+one();
 
 function oneV2 (){
   let username = "coco";
   console.log(this.username);//undefined
 }
-// oneV2();
+oneV2();
 // 'this' only used in object not every where
 
 // arrow function ----------------------------------------------
 
 //(basic function)
-// function one (){
-//   let username = "coco";
-//   console.log(this);
-// }
-// one();
+function one (){
+  let username = "coco";
+  console.log(this);
+}
+one();
 
 //(arrow function)
-// const one = () => {
-//   let username = "coco";
-//   console.log(username);
-// }
-// one()
+const one = () => {
+  let username = "coco";
+  console.log(username);
+}
+one()
 
-// const oneThis = () => {
-//   let username = "coco";
-//   console.log(this);
-// }
-// oneThis()
+const oneThis = () => {
+  let username = "coco";
+  console.log(this);
+}
+oneThis()
 //===================================================================
-// // (basic arrow function)
+// (basic arrow function)
 // (explisite return)
-// const addTwo = (num1, num2) => {
-//   return num1 + num2;
-// }
+const addTwo = (num1, num2) => {
+  return num1 + num2;
+}
 
 // (implesite return)
-// const addTwo = (num1, num2) =>  num1 + num2;
+const addTwoV3 = (num1, num2) =>  (num1 + num2);
 
-const addTwo = (num1, num2) =>  (num1 + num2);
+console.log(addTwoV3(2,3));
+/*
 
-console.log(addTwo(2,3));
-//----------------------------------------------
-// if you are using {} you have to use return statement 
-// but if you are using () then you do not need to use return statement
-//----------------------------------------------
+----------------------------------------------
+if you are using {} you have to use return statement 
+but if you are using () then you do not need to use return statement
+----------------------------------------------
+
+*/
+
 // you may think what about object
 const getUser = (name) => {username : "coco"};
 console.log(getUser(2,4));// undefined

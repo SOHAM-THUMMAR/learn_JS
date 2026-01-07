@@ -47,10 +47,15 @@ const myCoding = [
 myCoding.forEach((item)=> {
   console.log(item.languageName);
 })
+//========================================
+const values = myCoding.forEach((item) => {
+  return item;
+});
 
+console.log(values);// undefined
 
-
-
+// as you can see that for-each has call back funtion 
+// but it does not return any values
 
 
 

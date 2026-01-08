@@ -9,8 +9,43 @@
   
 </body>
 <script>
+//=================================================
   const div = document.createElement("div");
   console.log(div);
+
+  div.className = "Main";
+  div.id = "main";
+
+  div.id = Math.round(Math.random() * 10 +1)
+
+  div.setAttribute("title", "generated title");
+  div.style.backgroundColor = "green";
+  div.style.padding = "10px";
+  // till here our div is in memory not on page 
+  // for that we need to append it to the page
+//=================================================
+  // div.innerText = "Hellow!";// it overwrite the value not that optimized
+
+  // GOOD AND OPTIMIZED
+
+  const text = document.createTextNode("Hellow!");
+  div.appendChild(text);
+
+  // here we added some text in div in optimized way
+//=================================================
+
+  document.body.appendChild(div);
+  // here we rendered the div on the page
+  
+
+
+
+
+
+
+
+
+
 </script>
 
 

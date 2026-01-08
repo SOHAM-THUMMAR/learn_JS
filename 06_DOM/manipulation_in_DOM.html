@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Learning</title>
+</head>
+<body style="background-color: #212121; color: white;">
+  <div class="parent">
+    <div class="day">Sunday</div>
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+    <div class="day">Friday</div>
+    <div class="day">Saturday</div>
+  </div>
+</body>
+<script>
+
+
+  const parent = document.querySelector(".parent");
+
+  // console.log(parent);
+  // console.log(parent.children);// HTMLCollection
+  // console.log(parent.children[1].innerHTML);// Monday
+
+  for (let i = 0; i < parent.children.length; i++) {
+    // console.log(parent.children[i].innerHTML);
+    }
+    /*
+    0 => Sunday
+    1 => Monday
+    2 => Tuesday
+    3 => Wednesday
+    4 => Thursday
+    5 => Friday
+    6 => Saturday
+    */
+
+  parent.children[1].style.color = "orange";
+  // console.log(parent.firstElementChild); // sunday
+  // console.log(parent.lastElementChild); // saturday
+
+  const dayOne = document.querySelector('.day');
+
+  // console.log(dayOne); // first 'day' class which is 'sunday'
+  // console.log(dayOne.nextElementSibling); // Monday
+  // console.log(dayOne.previousElementSibling); 
+  // null because sunday is the first element
+
+    console.log("NODES: ", parent.childNodes);
+    // you can seethe DOM's tree structure and its value which is assigned by browser 
+    // node types: text, element, attribute, comment, document, doctype
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

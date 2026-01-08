@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Learning</title>
+  <style>
+    .bg-black{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class = "bg-black">
+  <div >
+    <h1 id="title" class = "heading">DOM Learning <span style="display: none;">span</span></h1> 
+    <h2>Lorem ipsum dolor sit,</h2>
+    <h2>Lorem ipsum dolor sit,</h2>
+    <h2>Lorem ipsum dolor sit,</h2>
+    <p>Lorem ipsum dolor sit, amet.</p>
+    <input type="password"/>
+    <ul>
+      <li class = "list-item">one</li>
+      <li class = "list-item">two</li>
+      <li class = "list-item">three</li>
+      <li class = "list-item">four</li>
+    </ul>
+  </div>
+</body>
+</html>
+
+<!-- 
+//==============================================================================================\
+
+CONSOLE of the browser
+
+> document.getElementById("title");
+< <h1 id="title" class="heading">DOM Learning</h1>
+
+> document.getElementById("title").id
+< 'title'
+
+> ocument.getElementById("title").class
+< undefined //due to name conflicts we have 'className'
+
+> document.getElementById("title").className
+< 'heading'
+
+> document.getElementById("title").getAttribute
+< ƒ getAttribute() { [native code] }
+
+> document.getElementById("title").getAttribute("id")
+< 'title'
+
+> document.getElementById("title").getAttribute("class")
+< 'heading'
+
+> document.getElementById("title").setAttribute("class","test");
+< undefined
+
+// setAttribute will always return undefined 
+// and it will always overwrite the value
+
+//==============================================================================================\
+
+  STYLING FROM THE CONSOLE 
+
+// here we can give the css properties to the element by its ids
+
+> const title = document.getElementById("title")
+< undefined
+
+> title
+< <h1 id=​"title" class=​"heading">​DOM Learning​</h1>​
+
+> title.style.backgroundColor = "green"
+< 'green'
+
+> title.style.padding = "10px"
+< '10px'
+
+//==============================================================================================
+
+  GETTING THE TEXT
+
+> title.innerText 
+// innerText returns only that text which is visible on the screen
+< 'DOM Learning'
+
+> title.textContent 
+// textContentreturns all the text including the invisible text
+< 'DOM Learning span'
+
+> title.innerHTML 
+// innerHTML returns all the text including the invisible text
+< 'DOM Learning <span style="display: none;">span</span>'
+
+//==============================================================================================
+
+  SOME QUARY SELECTORS
+
+> document.querySelector("h1")
+// returns the first h1 element
+< <h1 id="title" class="heading">DOM Learning</h1>
+
+> document.querySelector("#title")
+< <h1 id=​"title" class=​"heading">​…​</h1>​
+
+> document.querySelector(".heading")
+< <h1 id=​"title" class=​"heading">​…​</h1>​
+
+> document.querySelector("input[type='password']");
+< <input type=​"password">​
+
+//==============================================================================================\
+
+  DOM MANIPULATION
+
+> const myUl =document.querySelector("ul")
+// this will return the first ul element
+< undefined
+
+> const turnGreen = myUl.querySelector("li")
+// this will return the first li element
+< undefined
+
+> turnGreen.style.backgroundColor = "green"
+// here we are changing the background color
+  console.log(turnGreen)
+  console.log(myUl)
+
+< VM12874:3 <li style=​"background-color:​ green;​">​…​</li>​
+  VM12874:5 <ul>​…​</ul>​
+  undefined
+
+> turnGreen.style.backgroundColor = "green"
+  console.log(turnGreen)
+  console.log(myUl)
+< VM225:3 <li>​…​</li>​
+  VM225:5 <ul>​…​</ul>​
+  undefined
+
+> turnGreen.innerHTML
+< 'one'
+
+> turnGreen.innerHTML = "Green"
+  console.log(turnGreen)
+  console.log(myUl)
+< VM424:3 <li style=​"background-color:​ green;​">​…​</li>​
+  VM424:5 <ul>​…​</ul>​
+  undefined
+  
+//==============================================================================================\
+
+  NODELIST
+
+> const tempLiList = document.querySelectorAll("li")
+< undefined
+
+> tempLiList
+< NodeList(3) [li, li, li]
+
+// nodelist are like an array but it is not an array
+// it is an array-like object
+
+> tempLiList[0].style.color = "red"
+< 'red'
+
+// here tempLiList[0] <= index
+
+> tempLiList.forEach((l) =>{
+    l.style.backgroundColor = "red"
+  })
+< undefined
+
+//==============================================================================================\
+
+  HTML COLLECTIONS
+
+> const tempClass = document.getElementsByClassName("list-item")
+< undefined
+
+> tempClass
+< HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+> Array.from(tempClass) //<= converts html collection to array
+< (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+> tempArray.forEach((element) => {
+    element.style.color = "yellow"
+  });
+
+> tempArray
+< (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================================\
+-->
+
+

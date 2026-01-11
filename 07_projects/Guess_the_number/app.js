@@ -76,7 +76,17 @@ function endGame(){
 function newGame(){
   const newGameBtn = document.querySelector("#newGame");
   newGameBtn.addEventListener('click', function (e){
-    window.location.reload();
+    guessCount = 1;
+    prevGuess = [];
+    guessSlot.innerHTML = "";
+    remaining.innerHTML = `${11 - guessCount}`;
+    lowOrHi.innerHTML = "";
+    userInput.removeAttribute("disabled");
+    startOver.removeChild(p);
+    playGame = true;
+  
+    // window.location.reload();// advance method
+
   });
 }
 

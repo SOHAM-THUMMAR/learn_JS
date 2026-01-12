@@ -48,29 +48,27 @@
 
         //read about event object
         // https://developer.mozilla.org/en-US/docs/Web/API/Event
-        /* 
+        /*
+
         type, timestamp, defaulePrevented, target, toElement, srcElement,
         curerentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey,
         shiftKey, keyCode
+
         */
 
         document.getElementById('images').addEventListener('click',function(e){
             console.log("clicked on images");
         },false);
-
         document.getElementById('owl').addEventListener('click',function(e){
             console.log("clicked on owl");
             e.stopPropagation();// this is used to stop the propogation
             // means it will not go to parent it will stop here
         },false);
-        
         document.getElementById('google').addEventListener('click',function(e){
             e.preventDefault();
             e.stopPropagation();
             console.log("clicked on google");
         },false);
-
-
         document.querySelector('#images').addEventListener('click',function(e){
             console.log(e.target.parentNode);
             if(e.target.tagName === 'IMG'){
@@ -79,6 +77,5 @@
                 removeIt.remove(); // new method
             }
         },false);
-        
     </script>
 </html>
